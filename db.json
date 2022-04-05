@@ -1,0 +1,96 @@
+{
+  "continent": [
+    { 
+      "id": 1, 
+      "name": "europe",
+      "description": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
+      "num_countries": "50",
+      "languages": "60",
+      "banner": "/images/europe/europe-banner.svg",
+      "cities":"+100",
+      "countries": [
+        {
+          "id": 1,
+          "country": "Londres",
+          "city": "Reino Unido",
+          "banner": "/images/europe/londres.svg",
+          "flag": "/images/europe/ru-flag.svg"
+        },
+        {
+          "id": 2,
+          "country": "Paris",
+          "city": "França",
+          "banner": "/images/europe/paris.svg",
+          "flag": "/images/europe/franca-flag.svg"
+        },
+        {
+          "id": 3,
+          "country": "Roma",
+          "city": "Itália",
+          "banner": "/images/europe/paris.svg",
+          "flag": "/images/europe/franca-flag.svg"
+        },
+        {
+          "id": 4,
+          "country": "Praga",
+          "city": "República Tcheca",
+          "banner": "/images/europe/paris.svg",
+          "flag": "/images/europe/franca-flag.svg"
+        },
+        {
+          "id": 5,
+          "country": "Amsterdã",
+          "city": "Holanda",
+          "banner": "/images/europe/paris.svg",
+          "flag": "/images/europe/franca-flag.svg"
+        }
+      ]
+    },
+    { 
+      "id": 2, 
+      "name": "asia",
+      "description": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
+      "qtde_countries": "50",
+      "languages": "60",
+      "banner": "/images/europe/europe-banner.svg",
+      "cities":"+100",
+      "countries": [
+        {
+          "id": 1,
+          "country": "Londres",
+          "city": "Reino Unido",
+          "banner": "/images/europe/londres.svg",
+          "flag": "/images/europe/ru-flag.svg"
+        },
+        {
+          "id": 2,
+          "country": "Paris",
+          "city": "França",
+          "banner": "/images/europe/paris.svg",
+          "flag": "/images/europe/franca-flag.svg"
+        },
+        {
+          "id": 3,
+          "country": "Roma",
+          "city": "Itália",
+          "banner": "/images/europe/paris.svg",
+          "flag": "/images/europe/franca-flag.svg"
+        },
+        {
+          "id": 4,
+          "country": "Praga",
+          "city": "República Tcheca",
+          "banner": "/images/europe/paris.svg",
+          "flag": "/images/europe/franca-flag.svg"
+        },
+        {
+          "id": 5,
+          "country": "Amsterdã",
+          "city": "Holanda",
+          "banner": "/images/europe/paris.svg",
+          "flag": "/images/europe/franca-flag.svg"
+        }
+      ]
+    }
+  ]
+}
