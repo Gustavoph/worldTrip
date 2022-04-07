@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
 import { api } from '../../service/api'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import { Header } from '../../components/Header'
-import { Box, Text, Flex, Image, SimpleGrid } from '@chakra-ui/react'
+import { CardInfo } from '../../components/CardInfo'
 import { CountryCard } from '../../components/CountryCard'
+import { Box, Text, Flex, SimpleGrid } from '@chakra-ui/react'
 
 type Country = {
   id: number;
@@ -17,7 +18,9 @@ interface CountryResponse {
   id: number;
   name: string;
   description: string;
+  num_cities: string;
   num_countries: string;
+  num_languages: string;
   languages: string;
   banner: string;
   cities: string;
@@ -65,8 +68,7 @@ export default function Continent() {
               </Text>
             </Box>
           </Box>
-
-          <Flex maxW={1160} margin="0 auto" mt="80px" flexDir="column">
+          <Flex maxW={1160} margin="0 auto" mt="80px" flexDir="column"> 
             <Flex>
               <Flex width="50%">
                 <Text color="#47585B" fontSize={20} textAlign="justify">
@@ -74,71 +76,20 @@ export default function Continent() {
                 </Text>
               </Flex>
               <Flex width="50%" justify="center" align="center">
-                <Flex
-                  flexDir="column"
-                  justifyContent="center"
-                  alignItems="center"
-                  mr="40px"
-                >
-                  <Text
-                    fontSize={48}
-                    color="#FFBA08"
-                    fontWeight="semibold"
-                  >
-                    {country.num_countries}
-                  </Text>
-                  <Text
-                    fontSize={20}
-                    color="#47585B"
-                    fontWeight="semibold"
-                  >
-                    países
-                  </Text>
-                </Flex>
+                <CardInfo 
+                  title='países'
+                  quantity={country.num_countries}
+                />
 
-                <Flex
-                  flexDir="column"
-                  justifyContent="center"
-                  alignItems="center"
-                  mr="40px"
-                >
-                  <Text
-                    fontSize={48}
-                    color="#FFBA08"
-                    fontWeight="semibold"
-                  >
-                    {country.languages}
-                  </Text>
-                  <Text
-                    fontSize={20}
-                    color="#47585B"
-                    fontWeight="semibold"
-                  >
-                    línguas
-                  </Text>
-                </Flex>
+                <CardInfo 
+                  title='línguas'
+                  quantity={country.num_languages}
+                />
 
-                <Flex
-                  flexDir="column"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Text
-                    fontSize={48}
-                    color="#FFBA08"
-                    fontWeight="semibold"
-                  >
-                    {country.cities}
-                  </Text>
-                  <Text
-                    fontSize={20}
-                    color="#47585B"
-                    fontWeight="semibold"
-                  >
-                    cidades +100
-                  </Text>
-                </Flex>
-
+                <CardInfo 
+                  title='cidades +100'
+                  quantity={country.num_cities}
+                />
               </Flex>
             </Flex>
             <Flex flexDir="column" mt="80px">
@@ -148,11 +99,11 @@ export default function Continent() {
                 color="#47585B"
                 fontWeight="semibold"
               >
-                Cidades +100
+                Cidades {country.num_cities}
               </Text>
               
               <SimpleGrid columns={4} spacing={10}>
-                { country.countries.map((country, index) => {
+                { country.countries?.map((country, index) => {
                   return (
                     <CountryCard
                       key={index}
@@ -168,6 +119,8 @@ export default function Continent() {
           </Flex>
         </>
       ) }
+
+      <Box mt="35px" />
     </>
   )
 }
